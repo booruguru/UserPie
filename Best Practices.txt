@@ -1,0 +1,18 @@
+====================
+DATABASE. LOWERCASE.
+====================
+When adding new tables and columns to your database, make sure the names are lowercase.
+
+====================
+ASSETS
+====================
+Try to keep all of your page assets (CSS, Javascript, etc.) organized in their own separate folders. (It's just easier to keep track of files this way.) We've already created these folders for you, but feel free to change or delete them.
+
+====================
+WWWW / SEO
+====================
+Google (and other search engines) treat "www.domain.com" and "domain.com" as two separate websites which happen to share the same content. This redundancy can adversely affect your how your pages rank for keywords.
+
+It doesn't really matter which one you choose to be your official domain, but you should make a choice.  However, once you've made a choice, you can should setup your server to force domain redirects so that www.domain.com/page.html is automatically forwarded to domain.com/page.html or vice versa.
+
+For those using APACHE servers, this can be accomplished with a MOD_REWRITE adjustment to your .htaccess file. 
