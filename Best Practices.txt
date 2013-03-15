@@ -16,3 +16,15 @@ Google (and other search engines) treat "www.domain.com" and "domain.com" as two
 It doesn't really matter which one you choose to be your official domain, but you should make a choice.  However, once you've made a choice, you can should setup your server to force domain redirects so that www.domain.com/page.html is automatically forwarded to domain.com/page.html or vice versa.
 
 For those using APACHE servers, this can be accomplished with a MOD_REWRITE adjustment to your .htaccess file. 
+
+====================
+GOOGLE JQUERY
+====================
+
+Let Google host JQeuery for you.
+
+====================
+PAGE LOAD
+====================
+
+Don't be afraid to load assets like CSS and Javascript on pages they aren't used on. If you have a light page like a login screen, this is the best time to have the use load (and cache) files that they will need later.

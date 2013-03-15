@@ -1,0 +1,7 @@
+Hello #USERNAME#
+
+You or someone else has requested a new activation link, please use the below url to activate your account;
+
+#ACTIVATION-URL
+
+#INC-FOOTER#
