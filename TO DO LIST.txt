@@ -1,6 +1,6 @@
 USERPIE TO DO LIST
 
-- Find/replace to "username_Clean" to lowercase
+- Find/replace to "username_clean" to lowercase
 - Edit/consolidate change password and change e-mail pages
 - Create dynamically updated TOS and Privacy policy
 

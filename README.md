@@ -1,10 +1,25 @@
-test-project
+USERPIE
 ============
 
-Nothing to see here. I'm just testing out GitHub.
+UserPie is an open source PHP user management framework.
 
-Updated via GitHub web interface.
+FEATURES:
 
-Updated again via TextWrangler. Hopefully it works this time.
+    User Login
 
-I'm now updating the project via GitHub, again, just to see what happens with my now out-of-date local file.
+    Registration Form
+
+    Password Recovery
+
+    E-Mail Verification
+
+    Session Cookie ("Remember Me")
+
+    Change Password Form
+
+    Update E-mail Form
+
+    Twitter Bootstrap (CSS framework)
+
+    (and more features coming soon)
+

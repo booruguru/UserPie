@@ -73,7 +73,7 @@ if(!empty($_POST))
 						$loggedInUser->user_id = $userdetails["user_id"];
 						$loggedInUser->hash_pw = $userdetails["password"];
 						$loggedInUser->display_username = $userdetails["username"];
-						$loggedInUser->clean_username = $userdetails["username_Clean"];
+						$loggedInUser->clean_username = $userdetails["username_clean"];
 $loggedInUser->remember_me = $remember_choice;
 $loggedInUser->remember_me_sessid = generateHash(uniqid(rand(), true));
 						

@@ -14,7 +14,7 @@
 		$sql = "SELECT active
 				FROM ".$db_table_prefix."users
 				WHERE
-				username_Clean = '".$db->sql_escape(sanitize($username))."'
+				username_clean = '".$db->sql_escape(sanitize($username))."'
 				LIMIT 1";
 	
 		if(returns_result($sql) > 0)
@@ -92,7 +92,7 @@
 		{  
 			$sql = "SELECT * FROM ".$db_table_prefix."users
 					WHERE
-					username_Clean = '".$db->sql_escape(sanitize($username))."'
+					username_clean = '".$db->sql_escape(sanitize($username))."'
 					LIMIT
 					1";
 		}
@@ -118,7 +118,7 @@
 		$sql = "UPDATE ".$db_table_prefix."users
 				SET LostpasswordRequest = '".$value."'
 				WHERE
-				username_Clean ='".$db->sql_escape(sanitize($username))."'
+				username_clean ='".$db->sql_escape(sanitize($username))."'
 				LIMIT 1
 				";
 		
@@ -146,7 +146,7 @@
 		
 		$sql = "SELECT username,
 				email FROM ".$db_table_prefix."users
-				WHERE username_Clean = '".$db->sql_escape(sanitize($username))."'
+				WHERE username_clean = '".$db->sql_escape(sanitize($username))."'
 				AND
 				email = '".$db->sql_escape(sanitize($email))."'
 				LIMIT 1
@@ -236,7 +236,7 @@
 				last_activation_request = '".time()."'
 				WHERE email = '".$db->sql_escape(sanitize($email))."'
 				AND
-				username_Clean = '".$db->sql_escape(sanitize($username))."'";
+				username_clean = '".$db->sql_escape(sanitize($username))."'";
 		
 		return ($db->sql_query($sql));
 	}

@@ -69,7 +69,7 @@ if(!empty($_GET["confirm"]))
 					else
 					{	
 						//Might be wise if this had a time delay to prevent a flood of requests.
-						flagLostpasswordRequest($userdetails["username_Clean"],0);
+						flagLostpasswordRequest($userdetails["username_clean"],0);
 						
 						$success_message  = lang("FORGOTPASS_NEW_PASS_EMAIL");
 					}
@@ -96,7 +96,7 @@ if(!empty($_GET["deny"]))
 	
 		$userdetails = fetchUserDetails(NULL,$token);
 		
-		flagLostpasswordRequest($userdetails['username_Clean'],0);
+		flagLostpasswordRequest($userdetails['username_clean'],0);
 		
 		$success_message = lang("FORGOTPASS_REQUEST_CANNED");
 	}

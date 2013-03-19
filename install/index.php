@@ -83,7 +83,7 @@ a {
 					 CREATE TABLE IF NOT EXISTS `".$db_table_prefix."users` (
 					`user_id` int(11) NOT NULL auto_increment,
 					`username` varchar(150) NOT NULL,
-					`username_Clean` varchar(150) NOT NULL,
+					`username_clean` varchar(150) NOT NULL,
 					`password` varchar(225) NOT NULL,
 					`email` varchar(150) NOT NULL,
 					`activationtoken` varchar(225) NOT NULL,

@@ -104,7 +104,7 @@ class User
 					//Insert the user into the database providing no errors have been found.
 					$sql = "INSERT INTO `".$db_table_prefix."users` (
 							`username`,
-							`username_Clean`,
+							`username_clean`,
 							`password`,
 							`email`,
 							`activationtoken`,

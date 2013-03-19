@@ -47,3 +47,10 @@ If you have some kind of form that will take a while to insert lots of data, you
 
 It can be done quote easily with JavaScript. Here's the code:
 
+onsubmit="document.getElementById('Submit').disabled = 1;"
+
+(NOTE: it must be added to your form tag)
+
+EXAMPLE:
+
+	<form id="addlink_form" name="addlink_form" method="post" action="" onsubmit="document.getElementById('Submit').disabled = 1;">
