@@ -19,7 +19,6 @@ a {
 </style>
 </head>
 <body>
-<p><img src="usercake-badge.jpg"></p>
 <?php
 	/*
 		UserPie Version: 1.0
