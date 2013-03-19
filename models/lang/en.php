@@ -2,8 +2,6 @@
 	/*
 		UserPie Langauge File.
 		Language: English.
-		Author: Adam Davis
-		http://adamdavis.co.uk
 	*/
 	
 	/*

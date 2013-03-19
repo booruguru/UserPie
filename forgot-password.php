@@ -1,9 +1,9 @@
 <?php
 	/*
-		UserPie Version: 1.4
+		UserPie Version: 1.0
 		http://userpie.com
 		
-		Developed by: Adam Davis
+
 	*/
 	require_once("models/config.php");
 	
@@ -201,17 +201,16 @@ if(!empty($_POST))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Forgot password</title>
+<title>Forgot password | <?php echo $websiteName; ?> </title>
 <?php require_once("head_inc.php"); ?>
 </head>
 <body>
 <div class="modal-ish">
   <div class="modal-header">
-<center><img src="../images/klipbook-logo.png"></center>
+        <h2>Password Reset</h2>
   </div>
   <div class="modal-body">
         
-        <h3>Password Reset</h3>
         <br>
         
 		<?php
@@ -252,12 +251,12 @@ if(!empty($_POST))
                 <input type="text" name="email" />
             </p>
             
-            <p><input type="submit" class="btn btn-primary btn-large" name="new" id="newfeedform" value="Reset Password" /></p>
         </div>
         </div>    
             
-  
-  
+ <div class="modal-footer">
+<input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="Reset Password" />
+</div>
                 
                 </form>
             </div>

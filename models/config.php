@@ -1,9 +1,9 @@
 <?php
 	/*
-		UserPie Version: 1.4
+		UserPie Version: 1.0
 		http://userpie.com
 		
-		Developed by: Adam Davis
+
 	*/
 
 	if(is_dir("install/"))

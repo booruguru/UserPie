@@ -1,4 +1,4 @@
-Copyright (c) 2009-2010 Adam Davis
+Copyright (c) 2013 UserPie
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,8 +37,9 @@ Thank you for downloading UserPie, the simple user management package.
    To use the installer visit http://yourdomain.com/install/ in your browser. UserPie will attempt to build the database for you. After completion
    delete the install folder.
 
--  That's it your good to go! In only five steps you have a fully functional user management system.
-   For further documentation visit http://userpie.com
+6. The first user you create will be the admin.
+
+-  That's it. For further documentation visit http://userpie.com
 
 
 //--Notes
@@ -49,12 +50,12 @@ http://wiki.phpbb.com/Dbal
 
 //--Credits
 
-Lead Developer: Adam Davis - http://adavisdavis.co.uk
+UserPie is based upon UserCake created by Adam Davis - http://adavisdavis.co.uk
 Database Abstraction Layer: phpBB Group - http://phpbb.com
 
 ---------------------------------------------------------------
 
-Vers: 1.4
+Vers: 1.0
 http://userpie.com
 http://userpie.com/LICENCE.txt
 

@@ -1,9 +1,9 @@
 <?php
 	/*
-		UserPie Version: 1.4
+		UserPie Version: 1.0
 		http://userpie.com
 		
-		Developed by: Adam Davis
+
 	*/
 
 	//General Settings
@@ -22,13 +22,13 @@
 	
 	//Generic website variables
 	$websiteName = "User Pie Test";
-	$websiteUrl = "http://dev.userpie.com/"; //including trailing slash
+	$websiteUrl = "http://gitdev.userpie.com/"; //including trailing slash
 
 	//Do you wish UserPie to send out emails for confirmation of registration?
 	//We recommend this be set to true to prevent spam bots.
 	//False = instant activation
 	//If this variable is falses the resend-activation file not work.
-	$emailActivation = false;
+	$emailActivation = true;
 
 	//In hours, how long before UserPie will allow a user to request another account activation email
 	//Set to 0 to remove threshold

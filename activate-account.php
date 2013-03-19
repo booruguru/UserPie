@@ -1,14 +1,14 @@
 <?php
 	/*
-		UserPie Version: 1.4
+		UserPie Version: 1.0
 		http://userpie.com
 		
-		Developed by: Adam Davis
+
 	*/
 	require_once("models/config.php");
 	
 	//Prevent the user visiting the logged in page if he/she is already logged in
-	if(isUserLoggedIn()) { header("Location: account.php"); die(); }
+	if(isUserLoggedIn()) { header("Location: index.php"); die(); }
 ?>
 <?php
 	/* 
@@ -44,47 +44,55 @@ else
 	$errors[] = lang("FORGOTPASS_INVALID_TOKEN");
 }
 ?>
+
+
+		
+				
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Account Activation</title>
-<link href="cakestyle.css" rel="stylesheet" type="text/css" />
+<title>Account Activation | <?php echo $websiteName; ?> </title>
+<?php require_once("head_inc.php"); ?>
 </head>
 <body>
-<div id="wrapper">
 
-		<div id="content">
-    
-        <div id="left-nav">
-        <?php include("layout_inc/left-nav.php"); ?>
-            <div class="clear"></div>
-        </div>
-
-		<div id="main">
-
-		<h1>Account activation</h1>
-
-			<?php
+	
+	<div class="modal-ish">
+  <div class="modal-header">
+<h2>Activation</h2>
+  </div>
+  <div class="modal-body">
+ 
+	<?php
 				if(count($errors) > 0)
 				{
-            ?>
-            <div id="errors">
-            <?php errorBlock($errors); ?>
-            </div>     
-            <?php
+      errorBlock($errors);
            		 } else { ?> 
-        <div id="success">
-        
-           <p><?php echo lang("ACCOUNT_NOW_ACTIVE"); ?></p>
-           
-        </div>
-        <? }?>
-	 
+       <p>Activation Complete. You may now <a href="login.php">login.</a></p>    		 
+           		 
+    		    <? }?>
 
-		</div>
-	</div>
+                          
+
+                          </div>
+
+  
 </div>
+
+                </form>
+                
+        
+            <div class="clear"></div>
+<p style="margin-top:30px; text-align:center;">
+<a href="register.php">Sign Up</a> | <a href="login.php">Login</a> | <a href="forgot-password.php">Forgot Password?</a> | <a href="/">Home Page</a></p>
+            
 </body>
 </html>
+
+
+	
+	
+	
+
 

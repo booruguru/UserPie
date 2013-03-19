@@ -1,23 +1,40 @@
 <?php
 	/*
-		UserPie Version: 1.4
+		UserPie Version: 1.0
 		http://userpie.com
 		
-		Developed by: Adam Davis
+
 	*/
 	require_once("models/config.php");
 	
 	//Prevent the user visiting the logged in page if he/she is already logged in
-	if(isUserLoggedIn()) { header("Location: account.php"); die(); }
-?>
+	if(isUserLoggedIn()) { header("Location: index.php"); die(); }
+
+
+            if(!empty($_POST))
+            {
+				if(count($errors) > 0)
+				{
+       				errorBlock($errors);
+           		 } else {
+          
+            	if($emailActivation)
+				{
+               		 $message = lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE2");
+				}
+				
+				
+					header("Location: login.php?status=success");				
+            	
+ } }?>
+
 
 <?php
 	/* 
 		Below is a very simple example of how to process a new user.
 		 Some simple validation (ideally more is needed).
 		
-		The first goal is to check for empty / null data, to reduce workload here
-		we let the user class perform it's own internal checks, just in case they are missed.
+		The first goal is to check for empty / null data, to reduce workload here we let the user class perform it's own internal checks, just in case they are missed.
 	*/
 
 //Forms posted
@@ -76,45 +93,26 @@ if(!empty($_POST))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Registration</title>
+<title>Registration | <?php echo $websiteName; ?> </title>
 <?php require_once("head_inc.php"); ?>
 </head>
 <body>
 <div class="modal-ish">
   <div class="modal-header">
-<center><img src="../images/klipbook-logo.png"></center>
-  </div>
+<h2>Sign Up</h2>
+</div>
   <div class="modal-body">
 
        
 
 			
 
-			<?php
-            if(!empty($_POST))
-            {
-				if(count($errors) > 0)
-				{
-            ?>
-            <div id="errors">
-            <?php errorBlock($errors); ?>
-            </div>     
-            <?php
-           		 } else {
-          
-            	$message = lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE1");
-        
-            	if($emailActivation)
-				{
-               		 $message = lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE2");
-				}
-        ?> 
+
         <div id="success">
         
            <p><?php echo $message ?></p>
            
         </div>
-        <?php } }?>
 
             <div id="regbox">
                 <form name="newUser" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
@@ -130,7 +128,7 @@ if(!empty($_POST))
                 </p>
                 
                 <p>
-                    <label>Confirm:</label>
+                    <label>Re-type Password:</label>
                     <input type="password" name="passwordc" />
                 </p>
                 
@@ -139,13 +137,14 @@ if(!empty($_POST))
                     <input type="text" name="email" />
                 </p>
     
-    <p><input type="submit" class="btn btn-primary btn-large" name="new" id="newfeedform" value="Register" /></p>
       </div>           
       </div>
 
 
   
-  
+ <div class="modal-footer">
+<input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="Register" />
+  </div>  
                 
                 </form>
             </div>

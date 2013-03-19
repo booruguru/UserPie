@@ -1,9 +1,9 @@
 <?php
 	/*
-		UserPie Version: 1.4
-		http://userpie.com
+		UserCake Version: 1.0
+		http://usercake.com
 		
-		Developed by: Adam Davis
+
 	*/
 	include("models/config.php");
 	
@@ -61,13 +61,13 @@ if(!empty($_POST))
 			}
 			else if($entered_pass_new == $loggedInUser->hash_pw)
 			{
-				//Don't update, this fool is trying to update with the same password ¬¬
+				//Don't update, this fool is trying to update with the same password ÃÂ¬ÃÂ¬
 				$errors[] = lang("NOTHING_TO_UPDATE");
 			}
 			else
 			{
 				//This function will create the new hash and update the hash_pw property.
-				$loggedInUser->updatepassword($password_new);
+				$loggedInUser->updatePassword($password_new);
 			}
 		}
 	}
@@ -76,23 +76,16 @@ if(!empty($_POST))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Update password</title>
-<link href="cakestyle.css" rel="stylesheet" type="text/css" />
+<title>Update Password | <?php echo $websiteName; ?> </title>
+<?php require_once("head_inc.php"); ?>
+
 </head>
 <body>
-<div id="wrapper">
+<?php require_once("navbar.php"); ?>
 
-	<div id="content">
-    
-        <div id="left-nav">
-        <?php include("layout_inc/left-nav.php"); ?>
-            <div class="clear"></div>
-        </div>
-
-
-		<div id="main">
-        
-        <h1>Change password</h1>
+<div id="content">
+<div class="modal-ish">
+  <div class="modal-body">
 
 		<?php
             if(!empty($_POST))
@@ -111,11 +104,10 @@ if(!empty($_POST))
 
 		
 
-    	<div id="regbox">
             <form name="changePass" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             
                 <p>
-                    <label>password:</label>
+                    <label>Password:</label>
                     <input type="password" name="password" />
                 </p>
                 
@@ -128,21 +120,23 @@ if(!empty($_POST))
                     <label>Confirm Pass:</label>
                     <input type="password" name="passwordcheck" />
                 </p>
-                
-        		<p>
-                    <label>&nbsp;</label>
-                    <input type="submit" value="Update password" class="submit" />
-               </p>
-                    
-            </form>
-    
-   			<div class="clear"></div>
-    	</div>
-        
-        
-        </div>
-    </div>
+            </div>    
+
+
+  <div class="modal-footer">
+<input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="Update" />
+  </div>
+
+  
 </div>
+
+                </form>
+                
+        
+            <div class="clear"></div>
+
+  <p style="margin-top:30px; text-align:center;"><a href="/">Home</a></p>
+</div>  
 </body>
 </html>
 

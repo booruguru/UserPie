@@ -3,7 +3,7 @@
 		UserPie
 		http://userpie.com
 		
-		Developed by: Adam Davis
+
 	*/
 	require_once("models/config.php");
 	
@@ -100,15 +100,14 @@ setcookie("userPieUser", $loggedInUser->remember_me_sessid, time()+parseLength($
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Login</title>
+<title>Login | <?php echo $websiteName; ?> </title>
 <?php require_once("head_inc.php"); ?>
 </head>
 <body>
 
 <div class="modal-ish">
   <div class="modal-header">
-<center><img src="../images/klipbook-logo.png"></center>
-
+<h2>Sign In</h2>
   </div>
   <div class="modal-body">
  
@@ -129,7 +128,15 @@ setcookie("userPieUser", $loggedInUser->remember_me_sessid, time()+parseLength($
         } }
         ?> 
         
-            <div id="regbox">
+        <?php if(($_GET['status']) == "success") 
+        {
+        
+        echo "<p>Your account was created successfully. Please login.</p>";
+        
+    	}
+    	?>
+        
+        
                 <form name="newUser" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                 <p>
                     <label>Username:</label>
@@ -146,16 +153,15 @@ setcookie("userPieUser", $loggedInUser->remember_me_sessid, time()+parseLength($
                      <label><small>Remember Me?</small></label>
                 </p>                
 
- <p>
-	<br>
-	<p><input type="submit" class="btn btn-primary btn-large" name="new" id="newfeedform" value="Sign In" /></p>
+	
                           
-                            </div>
 
                           </div>
 
             
-
+ <div class="modal-footer">
+<input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="Sign In" />
+  </div>
   
 </div>
 

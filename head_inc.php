@@ -1,4 +1,4 @@
-
+	<base href="<?php echo $websiteUrl; ?>"> 
 
 <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />

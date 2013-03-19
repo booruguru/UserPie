@@ -1,9 +1,9 @@
 <?php
 	/*
-		UserPie Version: 1.4
+		UserPie Version: 1.0
 		http://userpie.com
 		
-		Developed by: Adam Davis
+
 	*/
 	require_once("models/config.php");
 	
@@ -120,17 +120,16 @@ if(!empty($_POST) && $emailActivation)
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Resend Activation email</title>
+<title>Resend Activation email | <?php echo $websiteName; ?> </title>
 <?php require_once("head_inc.php"); ?>
 </head>
 <body>
 
 <div class="modal-ish">
   <div class="modal-header">
-<center><img src="../images/klipbook-logo.png"></center>
+ 	 <h2>Resend Activation E-mail</h2>
   </div>
   <div class="modal-body"> 
- 	 <h3>Resend Activation E-mail</h3>
  
     <?php
     if(!empty($_POST) || !empty($_GET["confirm"]) || !empty($_GET["deny"]) && $emailActivation)

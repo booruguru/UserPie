@@ -1,9 +1,9 @@
 <?php
 	/*
-		UserPie Version: 1.4
-		http://userpie.com
+		UserCake Version: 1.0
+		http://usercake.com
 		
-		Developed by: Adam Davis
+
 	*/
 	include("models/config.php");
 	
@@ -29,7 +29,7 @@ if(!empty($_POST))
 		{
 			$errors[] = lang("ACCOUNT_SPECIFY_EMAIL");
 		}
-		else if(!isValidemail($email))
+		else if(!isValidEmail($email))
 		{
 			$errors[] = lang("ACCOUNT_INVALID_EMAIL");
 		}
@@ -45,7 +45,7 @@ if(!empty($_POST))
 		//End data validation
 		if(count($errors) == 0)
 		{
-			$loggedInUser->updateemail($email);
+			$loggedInUser->updateEmail($email);
 		}
 	}
 ?>
@@ -53,22 +53,17 @@ if(!empty($_POST))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Update Contact Details</title>
-<link href="cakestyle.css" rel="stylesheet" type="text/css" />
+<title>Update Contact Details | <?php echo $websiteName; ?> </title>
+<?php require_once("head_inc.php"); ?>
+
 </head>
 <body>
-<div id="wrapper">
+<?php require_once("navbar.php"); ?>
+<div id="content">
 
-	<div id="content">
+<div class="modal-ish">
+  <div class="modal-body">
     
-        <div id="left-nav">
-        <?php include("layout_inc/left-nav.php"); ?>
-            <div class="clear"></div>
-        </div>
-
-		<div id="main">
-
-            <h1>Update your email address</h1>
     
             <?php
                 if(!empty($_POST))
@@ -89,24 +84,26 @@ if(!empty($_POST))
             <? } }?>
 
     
-            <div id="regbox">
                 <form name="changePass" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             
                 <p>
-                    <label>email:</label>
+                    <label>Email:</label>
                     <input type="text" name="email" value="<?php echo $loggedInUser->email; ?>" />
                 </p>
-        
-                <p>
-                    <label>&nbsp;</label>
-                    <input type="submit" value="Update email" class="submit" />
-                </p>
+               </div>
+
+       
+  <div class="modal-footer">
+<input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="Update" />
+  </div>
                 
                 </form>
-            </div>
+      </div>
+      
+            
             <div class="clear"></div>
-        </div>
-	</div>
+            
+              <p style="margin-top:30px; text-align:center;"><a href="/">Home</a></p>
 </div>
 </body>
 </html>

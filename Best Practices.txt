@@ -28,3 +28,22 @@ PAGE LOAD
 ====================
 
 Don't be afraid to load assets like CSS and Javascript on pages they aren't used on. If you have a light page like a login screen, this is the best time to have the use load (and cache) files that they will need later.
+
+
+====================
+ACCOUNT FORWARDING
+====================
+
+Instead of redirecting users to a userpage like "userpage.php" first send them to index.php and then redirect them to the appropriate page. For whatever reason you might change the name of your userpage file or you might want to add unforeseen parameters to determine where a user is sent.
+
+Using the index.php file as a baseline means you wont have to constantly update your code as you make changes to your code. 
+
+Also, when logged users visit the base domain of your site they expect to be forwarded to their userpage.
+
+====================
+DISABLE SUBMIT BUTTON UPON CLICK
+====================
+If you have some kind of form that will take a while to insert lots of data, you'll probably want to "disable" the submit button so users will not that the submission is being sent (while also preventing duplicates).
+
+It can be done quote easily with JavaScript. Here's the code:
+

@@ -21,3 +21,8 @@ We created a this custom.css file so you can add customize styles without modify
      -moz-background-clip: padding-box;
           background-clip: padding-box;
 }
+
+#content {
+  width:550px;
+  margin: 70px auto auto auto; 
+}

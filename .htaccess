@@ -1,0 +1,19 @@
+ErrorDocument 401 /401.php
+ErrorDocument 404 /404.php
+RewriteEngine On
+
+#redirect www request to the base domain
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L] 
+
+#ignore existing files and directories
+RewriteCond %{REQUEST_FILENAME} -f [NC,OR]
+RewriteCond %{REQUEST_FILENAME} -d [NC]
+RewriteRule .* - [L]
+
+# Check if query string exists
+RewriteCond %{QUERY_STRING} ^$
+
+# Check that the request is not for an existing file
+RewriteCond %{REQUEST_FILENAME} !-f
+
