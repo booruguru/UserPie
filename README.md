@@ -3,7 +3,16 @@ USERPIE
 
 UserPie is an open source PHP user management framework.
 
-FEATURES:
+DOWNLOAD
+============
+
+Please use the link below to download UserPie. (This way we can count the number of downloads, since GitHub does not provide this functionality.)
+
+http://userpie.com/latest.zip
+
+
+FEATURES
+============
 
     User Login
 
