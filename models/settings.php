@@ -12,17 +12,17 @@
 	//Database Information
 	$dbtype = "mysql"; 
 	$db_host = "localhost";
-	$db_user = "userpiec_dbuser";
-	$db_pass = "xDr)UnN+ZJ(G";
-	$db_name = "userpiec_devgit";
+	$db_user = "";
+	$db_pass = "";
+	$db_name = "";
 	$db_port = "";
 	$db_table_prefix = "userpie_";
 
 	$langauge = "en";
 	
 	//Generic website variables
-	$websiteName = "User Pie Test";
-	$websiteUrl = "http://gitdev.userpie.com/"; //including trailing slash
+	$websiteName = "";
+	$websiteUrl = ""; //including trailing slash
 
 	//Do you wish UserPie to send out emails for confirmation of registration?
 	//We recommend this be set to true to prevent spam bots.
