@@ -23,7 +23,7 @@
   <div class="modal-body">
 <center>  
 <h1>401</h1>
-<h2>You are not authorized to we this page.</h2>
+<h2>You are not authorized to view this page.</h2>
 </center>
                           </div>
 
