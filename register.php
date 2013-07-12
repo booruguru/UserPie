@@ -9,24 +9,7 @@
 	
 	//Prevent the user visiting the logged in page if he/she is already logged in
 	if(isUserLoggedIn()) { header("Location: index.php"); die(); }
-
-
-            if(!empty($_POST))
-            {
-				if(count($errors) > 0)
-				{
-       				errorBlock($errors);
-           		 } else {
-          
-            	if($emailActivation)
-				{
-               		 $message = lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE2");
-				}
-				
-				
-					header("Location: login.php?status=success");				
-            	
- } }?>
+?>
 
 
 <?php
@@ -87,6 +70,15 @@ if(!empty($_POST))
 					}
 				}
 		}
+	   if(count($errors) == 0) 
+	   {
+		        if($emailActivation)
+		        {
+		             $message = lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE2");
+		        } else {
+		             $message = lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE1");
+		        }
+	   }
 	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -154,5 +146,3 @@ if(!empty($_POST))
 
 </body>
 </html>
-
-
