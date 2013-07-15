@@ -1,8 +1,8 @@
 <?php
 
 	/*
-		UserCake Version: 1.0
-		http://usercake.com
+		UserPie Version: 1.0
+		http://userpie.com
 		
 
 	*/
