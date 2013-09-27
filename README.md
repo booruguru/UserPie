@@ -32,3 +32,8 @@ FEATURES
 
     (and more features coming soon)
 
+OTHER PROJECTS
+===============
+
+RGBHexCode ColourPicker
+http://rgbhexcode.com
