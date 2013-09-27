@@ -14,27 +14,10 @@ http://userpie.com/latest.zip
 FEATURES
 ============
 
-    User Login
+User Login, Registration Form, Password Recovery, E-Mail Verification, Session Cookie ("Remember Me"), Change Password Form, Update E-mail Form, Twitter Bootstrap (CSS framework)
 
-    Registration Form
-
-    Password Recovery
-
-    E-Mail Verification
-
-    Session Cookie ("Remember Me")
-
-    Change Password Form
-
-    Update E-mail Form
-
-    Twitter Bootstrap (CSS framework)
-
-    (and more features coming soon)
 
 OTHER PROJECTS
 ===============
 
-RGBHexCode ColourPicker
-
-http://rgbhexcode.com
+RGBHexCode ColourPicker --> http://rgbhexcode.com
