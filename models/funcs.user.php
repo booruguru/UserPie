@@ -163,12 +163,9 @@
 	{
 		global $loggedInUser,$db,$db_table_prefix;
 		
-		if($loggedInUser == NULL)
-		{
+		if($loggedInUser == NULL){
 			return false;
-		}
-		else
-		{
+		}else{
 			$sql = "SELECT user_id,
 				password
 				FROM ".$db_table_prefix."users
@@ -179,7 +176,7 @@
 				AND
 				active = 1
 				LIMIT 1";
-		
+			
 		
 			//Query the database to ensure they haven't been removed or possibly banned?
 			if(returns_result($sql) > 0)
