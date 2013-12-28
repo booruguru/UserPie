@@ -72,7 +72,11 @@ class userPieMail {
 		if($msg == NULL)
 			$msg = $this->contents; 
 
-		$message .= $msg;
+		if( !empty( $message ) ) {
+			$message .= $msg;
+		} else {
+			$message = $msg;
+		}
 
 		$message = wordwrap($message, 70);
 			
