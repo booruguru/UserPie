@@ -128,12 +128,12 @@ setcookie("userPieUser", $loggedInUser->remember_me_sessid, time()+parseLength($
         } }
         ?> 
         
-        <?php if(($_GET['status']) == "success") 
-        {
+        <?php 
         
-        echo "<p>Your account was created successfully. Please login.</p>";
-        
-    	}
+        if( !empty( $_GET['status'] ) && ( $_GET['status'] ) == "success" ) {
+	        echo "<p>Your account was created successfully. Please login.</p>";
+    	} 
+    	
     	?>
         
         
