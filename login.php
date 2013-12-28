@@ -22,7 +22,7 @@ if(!empty($_POST))
 		$errors = array();
 		$username = trim($_POST["username"]);
 		$password = trim($_POST["password"]);
-		$remember_choice = trim($_POST["remember_me"]);
+		$remember_choice = !empty( $_POST["remember_me"] ) ? trim( $_POST["remember_me"] ) : 0;
 	
 		//Perform some validation
 		//Feel free to edit / change as required
