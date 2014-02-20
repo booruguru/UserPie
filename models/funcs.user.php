@@ -163,6 +163,11 @@
 	{
 		global $loggedInUser,$db,$db_table_prefix;
 		
+		// ensure loggedInUser is not null before attempting to use it
+		if( empty( $loggedInUser ) ) {
+			return false;
+		}
+		
 		$sql = "SELECT user_id,
 				password
 				FROM ".$db_table_prefix."users

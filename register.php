@@ -100,11 +100,15 @@ if(!empty($_POST))
 			
 
 
-        <div id="success">
-        
-           <p><?php echo $message ?></p>
-           
-        </div>
+        <div id="success"> <?php
+			if( !empty( $_POST ) ) {
+				if( count( $errors ) > 0 ) {
+					errorBlock( $errors );
+				} else {
+					echo '<p>' . $message . '</p>';
+				}
+			} ?>          
+		</div>
 
             <div id="regbox">
                 <form name="newUser" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">

@@ -22,7 +22,7 @@ if(!empty($_POST))
 		$errors = array();
 		$username = trim($_POST["username"]);
 		$password = trim($_POST["password"]);
-		$remember_choice = trim($_POST["remember_me"]);
+		$remember_choice = !empty( $_POST["remember_me"] ) ? trim( $_POST["remember_me"] ) : 0;
 	
 		//Perform some validation
 		//Feel free to edit / change as required
@@ -74,18 +74,18 @@ if(!empty($_POST))
 						$loggedInUser->hash_pw = $userdetails["password"];
 						$loggedInUser->display_username = $userdetails["username"];
 						$loggedInUser->clean_username = $userdetails["username_clean"];
-$loggedInUser->remember_me = $remember_choice;
-$loggedInUser->remember_me_sessid = generateHash(uniqid(rand(), true));
+						$loggedInUser->remember_me = $remember_choice;
+						$loggedInUser->remember_me_sessid = generateHash(uniqid(rand(), true));
 						
 						//Update last sign in
 						$loggedInUser->updatelast_sign_in();
 		
-						if($loggedInUser->remember_me == 0)
-$_SESSION["userPieUser"] = $loggedInUser;
-else if($loggedInUser->remember_me == 1) {
-$db->sql_query("INSERT INTO ".$db_table_prefix."sessions VALUES('".time()."', '".serialize($loggedInUser)."', '".$loggedInUser->remember_me_sessid."')");
-setcookie("userPieUser", $loggedInUser->remember_me_sessid, time()+parseLength($remember_me_length));
-}
+						if($loggedInUser->remember_me == 0) {
+							$_SESSION["userPieUser"] = $loggedInUser;
+						} else if($loggedInUser->remember_me == 1) {
+							$db->sql_query("INSERT INTO ".$db_table_prefix."sessions VALUES('".time()."', '".serialize($loggedInUser)."', '".$loggedInUser->remember_me_sessid."')");
+							setcookie("userPieUser", $loggedInUser->remember_me_sessid, time()+parseLength($remember_me_length));
+						}
 						
 						//Redirect to user account page
 						header("Location: index.php");
@@ -128,12 +128,12 @@ setcookie("userPieUser", $loggedInUser->remember_me_sessid, time()+parseLength($
         } }
         ?> 
         
-        <?php if(($_GET['status']) == "success") 
-        {
+        <?php 
         
-        echo "<p>Your account was created successfully. Please login.</p>";
-        
-    	}
+        if( !empty( $_GET['status'] ) && ( $_GET['status'] ) == "success" ) {
+	        echo "<p>Your account was created successfully. Please login.</p>";
+    	} 
+    	
     	?>
         
         
