@@ -6,6 +6,15 @@
 
 	*/
 	require_once("models/config.php");
+
+	/*
+	* Uncomment the "else" clause below if e.g. userpie is not at the root of your site.
+	*/
+	if (!isset($loggedInUser))
+		header('Location: login.php');
+//	else
+//		header('Location: /');
+	exit();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

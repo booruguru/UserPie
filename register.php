@@ -79,6 +79,10 @@ if(!empty($_POST))
 		             $message = lang("ACCOUNT_REGISTRATION_COMPLETE_TYPE1");
 		        }
 	   }
+	   else
+	   {
+	   			$message = '<span style="color: red;">'.implode(", ", $errors).'</span>';
+	   }
 	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -102,7 +106,7 @@ if(!empty($_POST))
 
         <div id="success">
         
-           <p><?php echo $message ?></p>
+           <p><?php if (isset($message)) echo $message; ?></p>
            
         </div>
 

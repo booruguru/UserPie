@@ -162,6 +162,10 @@
 	function isUserLoggedIn()
 	{
 		global $loggedInUser,$db,$db_table_prefix;
+		if (!isset($loggedInUser) || $loggedInUser == NULL)
+		{
+			return false;
+		}
 		
 		$sql = "SELECT user_id,
 				password
