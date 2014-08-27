@@ -8,7 +8,7 @@
 *
 */
 
-include_once('dbal.php');
+include_once(dirname(__FILE__).'dbal.php');
 
 /**
 * MySQL4 Database Abstraction Layer
