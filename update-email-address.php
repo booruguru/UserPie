@@ -81,7 +81,7 @@ if(!empty($_POST))
                <p><?php echo lang("ACCOUNT_DETAILS_UPDATED"); ?></p>
                
             </div>
-            <? } }?>
+            <?php } }?>
 
     
                 <form name="changePass" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
