@@ -12,10 +12,10 @@
 		die();
 	}
 	
-	require_once("settings.php");
+	require_once(dirname(__FILE__)."/settings.php");
 
 	//Dbal Support - Thanks phpBB ; )
-	require_once("db/".$dbtype.".php");
+	require_once(dirname(__FILE__)."/db/".$dbtype.".php");
 	
 	//Construct a db instance
 	$db = new $sql_db();
@@ -33,12 +33,12 @@
 	
 	if(!isset($language)) $langauge = "en";
 
-	require_once("lang/".$langauge.".php");
-	require_once("class.user.php");
-	require_once("class.mail.php");
-	require_once("funcs.user.php");
-	require_once("funcs.general.php");
-	require_once("class.newuser.php");
+	require_once(dirname(__FILE__)."/lang/".$langauge.".php");
+	require_once(dirname(__FILE__)."/class.user.php");
+	require_once(dirname(__FILE__)."/class.mail.php");
+	require_once(dirname(__FILE__)."/funcs.user.php");
+	require_once(dirname(__FILE__)."/funcs.general.php");
+	require_once(dirname(__FILE__)."/class.newuser.php");
 
 	session_start();
 	
