@@ -71,7 +71,7 @@ else
            		 } else { ?> 
        <p>Activation Complete. You may now <a href="login.php">login.</a></p>    		 
            		 
-    		    <? }?>
+    		    <?php }?>
 
                           
 

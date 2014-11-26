@@ -11,6 +11,11 @@
 		header("Location: install/");
 		die();
 	}
+
+	// The following line appeases recent versions of PHP. If you want a different time zone,
+	// insert a similar call into models/settings.php with your desired time zone
+	// NOTE: You probably do want a different time zone.
+	date_default_timezone_set('UTC');
 	
 	require_once(dirname(__FILE__)."/settings.php");
 
