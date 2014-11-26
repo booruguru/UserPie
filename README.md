@@ -1,4 +1,4 @@
-USERPIE
+USERPIE 1.1
 ============
 
 UserPie is an open source PHP user management framework.
@@ -20,4 +20,5 @@ User Login, Registration Form, Password Recovery, E-Mail Verification, Session C
 OTHER PROJECTS
 ===============
 
-RGBHexCode ColourPicker --> http://rgbhexcode.com
+THE HTML GUIDE - http://www.thehtmlguide.com
+ServerFAQs - http://www.serverfaqs.com
