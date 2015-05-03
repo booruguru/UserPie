@@ -100,7 +100,7 @@ if(!empty($_POST))
             <div id="success">
                <p><?php echo lang("ACCOUNT_DETAILS_UPDATED"); ?></p>
             </div>
-        <? } }?>
+        <?php } }?>
 
 		
 
