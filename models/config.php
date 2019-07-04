@@ -16,11 +16,12 @@
 	// insert a similar call into models/settings.php with your desired time zone
 	// NOTE: You probably do want a different time zone.
 	date_default_timezone_set('UTC');
-	
-	require_once(dirname(__FILE__)."/settings.php");
+	// On windows the directory separator is a backslash
+	$cfgLocation = str_replace('\\','/',dirname(__FILE__))
+	require_once($cfgLocation."/settings.php");
 
 	//Dbal Support - Thanks phpBB ; )
-	require_once(dirname(__FILE__)."/db/".$dbtype.".php");
+	require_once($cfgLocation."/db/".$dbtype.".php");
 	
 	//Construct a db instance
 	$db = new $sql_db();
@@ -38,12 +39,12 @@
 	
 	if(!isset($language)) $langauge = "en";
 
-	require_once(dirname(__FILE__)."/lang/".$langauge.".php");
-	require_once(dirname(__FILE__)."/class.user.php");
-	require_once(dirname(__FILE__)."/class.mail.php");
-	require_once(dirname(__FILE__)."/funcs.user.php");
-	require_once(dirname(__FILE__)."/funcs.general.php");
-	require_once(dirname(__FILE__)."/class.newuser.php");
+	require_once($cfgLocation."/lang/".$langauge.".php");
+	require_once($cfgLocation."/class.user.php");
+	require_once($cfgLocation."/class.mail.php");
+	require_once($cfgLocation."/funcs.user.php");
+	require_once($cfgLocation."/funcs.general.php");
+	require_once($cfgLocation."/class.newuser.php");
 
 	session_start();
 	
